@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @train_type %>
+
+<div>
+  <%= link_to "Edit this train type", edit_train_type_path(@train_type) %> |
+  <%= link_to "Back to train types", train_types_path %>
+
+  <%= button_to "Destroy this train type", @train_type, method: :delete %>
+</div>

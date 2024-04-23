@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Train types</h1>
+
+<div id="train_types">
+  <% @train_types.each do |train_type| %>
+    <%= render train_type %>
+    <p>
+      <%= link_to "Show this train type", train_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New train type", new_train_type_path %>
