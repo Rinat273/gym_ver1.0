@@ -1,7 +1,7 @@
 class Api::V1::TrainsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def index
+def index
     @trains = Train.all
       if @trains
         render json: @trains, status: 200
