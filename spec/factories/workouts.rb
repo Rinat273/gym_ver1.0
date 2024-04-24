@@ -1,3 +1,4 @@
+# создаем фабрику workout
 FactoryBot.define do
   factory :workout do
     train
