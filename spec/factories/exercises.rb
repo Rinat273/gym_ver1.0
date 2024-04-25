@@ -1,4 +1,3 @@
-# создаем фабрику exercise
 FactoryBot.define do
   factory :exercise do
     approach_number  { 1 }

@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  # создаем пространство имен api
   namespace :api do
     namespace :v1 do
       resources :trains do
-        # вкладываем ресурсы workouts в trains
         resources :workouts
       end
     end
