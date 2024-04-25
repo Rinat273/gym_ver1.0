@@ -24,8 +24,7 @@ RSpec.describe "Trains", type: :request do
       let!(:train_plan) { create(:train_plan) }
       
       it 'status http 201' do
-        post "/api/v1/trains", 
-        params: { train: {train_plan_id: train_plan.id } }
+        post "/api/v1/trains", params: { train: {train_plan_id: train_plan.id } }
         expect(response.status).to eq(201)
       end
     end

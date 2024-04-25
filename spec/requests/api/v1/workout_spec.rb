@@ -25,8 +25,7 @@ RSpec.describe "Workouts" do
       end
       
       it "status http 400" do
-        post "/api/v1/trains/#{train.id}/workouts",
-        params: { }
+        post "/api/v1/trains/#{train.id}/workouts", params: { }
         expect(response.status).to eq(400)
       end
     end
