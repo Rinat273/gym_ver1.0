@@ -10,14 +10,14 @@ def index
       end
   end
 
-  def show
-      @train = Train.find(params[:id])
-      if @train
-        render json: @train, status: 200
-      else
-        render json: "Train Not Found", status: 404
-      end
-  end
+  # def show
+  #     @train = Train.find(params[:id])
+  #     if @train
+  #       render json: @train, status: 200
+  #     else
+  #       render json: "Train Not Found", status: 404
+  #     end
+  # end
 
   def create
     @train = Train.new(train_params)
@@ -29,14 +29,13 @@ def index
     end
   end
 
-
-  def destroy
-    @train = Train.find(params[:id])
-    if @train
-      @train.destroy
-      render json: "Train deleted"
-    end
-  end
+  # def destroy
+  #   @train = Train.find(params[:id])
+  #   if @train
+  #     @train.destroy
+  #     render json: "Train deleted"
+  #   end
+  # end
 
   private
     def train_params

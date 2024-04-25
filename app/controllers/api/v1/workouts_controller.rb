@@ -10,14 +10,14 @@ class Api::V1::WorkoutsController < ApplicationController
     end
   end
 
-  def show
-    @workout = Workout.find(params[:id])
-    if @workout
-      render json: @workout, status: 200
-    else
-      render json: "Workout Not Found", status: 404
-    end
-  end
+  # def show
+  #   @workout = Workout.find(params[:id])
+  #   if @workout
+  #     render json: @workout, status: 200
+  #   else
+  #     render json: "Workout Not Found", status: 404
+  #   end
+  # end
 
   def create
     @workout = Workout.new(workout_params)
@@ -28,13 +28,13 @@ class Api::V1::WorkoutsController < ApplicationController
     end
   end
 
-  def destroy
-    @workout = Workout.find(params[:id])
-    if @workout
-      @workout.destroy
-      render json: "Workout deleted", status: 204
-    end
-  end
+  # def destroy
+  #   @workout = Workout.find(params[:id])
+  #   if @workout
+  #     @workout.destroy
+  #     render json: "Workout deleted", status: 204
+  #   end
+  # end
 
   private
   def workout_params
